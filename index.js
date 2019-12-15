@@ -6,6 +6,9 @@ const bodyParser = require('body-parser');
 //Rota página about:
 const aboutController = require('./about/AboutController');
 
+//Rota página portfólio:
+const portfolioController = require('./portfolio/PortfolioController');
+
 //Carrega view engine:
 app.set('view engine', 'ejs');
 
@@ -24,6 +27,7 @@ connection.authenticate().then(() => {
 });
 
 app.use('/', aboutController);
+app.use('/', portfolioController);
 
 app.get('/', (req, res) => {
     res.render('index.ejs')
