@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/TonyALS/engelcad/issues"
   },
-  "homepage": "https://github.com/TonyALS/engelcad#readme"
+  "homepage": "https://github.com/TonyALS/engelcad#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mysql2": "^2.0.2",
+    "sequelize": "^5.21.3",
+    "slugify": "^1.3.6"
+  }
 }
