@@ -1,0 +1,19 @@
+{
+  "name": "engelcad_site",
+  "version": "1.0.0",
+  "description": "Site institucional Engelcad Engenharia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TonyALS/engelcad.git"
+  },
+  "author": "Tony Augusto Luz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TonyALS/engelcad/issues"
+  },
+  "homepage": "https://github.com/TonyALS/engelcad#readme"
+}
