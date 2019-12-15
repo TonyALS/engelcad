@@ -3,6 +3,9 @@ const app = express();
 const connection = require('./database/database');
 const bodyParser = require('body-parser');
 
+//Rota página about:
+const aboutController = require('./about/AboutController');
+
 //Carrega view engine:
 app.set('view engine', 'ejs');
 
@@ -19,6 +22,8 @@ connection.authenticate().then(() => {
 }).catch((err) => {
     console.log('Erro ao conectar ao banco: ' + err)
 });
+
+app.use('/', aboutController);
 
 app.get('/', (req, res) => {
     res.render('index.ejs')
