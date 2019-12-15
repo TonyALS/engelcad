@@ -20,8 +20,9 @@ connection.authenticate().then(() => {
     console.log('Erro ao conectar ao banco: ' + err)
 });
 
-
-
+app.get('/', (req, res) => {
+    res.render('index.ejs')
+})
 
 
 
