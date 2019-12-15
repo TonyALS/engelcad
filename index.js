@@ -9,6 +9,9 @@ const aboutController = require('./about/AboutController');
 //Rota página portfólio:
 const portfolioController = require('./portfolio/PortfolioController');
 
+//Rota página de contato:
+const contactController = require('./contact/ContactController');
+
 //Carrega view engine:
 app.set('view engine', 'ejs');
 
@@ -28,6 +31,7 @@ connection.authenticate().then(() => {
 
 app.use('/', aboutController);
 app.use('/', portfolioController);
+app.use('/', contactController);
 
 app.get('/', (req, res) => {
     res.render('index.ejs')
