@@ -3,6 +3,9 @@ const app = express();
 const connection = require('./database/database');
 const bodyParser = require('body-parser');
 
+//Models:
+const Article = require('./articles/Articles');
+
 //Rota página about:
 const aboutController = require('./about/AboutController');
 
