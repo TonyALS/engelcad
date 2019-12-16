@@ -15,6 +15,9 @@ const portfolioController = require('./portfolio/PortfolioController');
 //Rota página de contato:
 const contactController = require('./contact/ContactController');
 
+//Rota para página de novo artigo:
+const articlesController = require('./articles/ArticlesController');
+
 //Carrega view engine:
 app.set('view engine', 'ejs');
 
@@ -35,6 +38,7 @@ connection.authenticate().then(() => {
 app.use('/', aboutController);
 app.use('/', portfolioController);
 app.use('/', contactController);
+app.use('/', articlesController);
 
 app.get('/', (req, res) => {
     res.render('index.ejs')
