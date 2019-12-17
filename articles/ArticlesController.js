@@ -23,7 +23,23 @@ router.post('/admin/article/save', (req, res) => {
     });
 });
 
-//Rota para carregar os artigos cadastrados:
+//Rota para excluir um artigo:
+router.post('/admin/article/delete', (req, res) => {
+    let id = req.body.id;
+    if((id != undefined) && (!isNaN(id))){
+        Article.destroy({
+            where: {
+                id: id
+            }
+        }).then(() => {
+            res.redirect('/admin/articles');
+        })
+    }else{
+        res.send('Erro ao excluir artigo');
+    };
+});
+
+//Rota para carregar os artigos cadastrados para usuários não autenticados:
 router.get('/articles', (req, res) => {
     Article.findAll({
         order: [
@@ -33,5 +49,16 @@ router.get('/articles', (req, res) => {
         res.render('article', {articles: articles});
     });
 });
+
+//Rota para carregar os artigos para usuários autenticados:
+router.get('/admin/articles', (req, res) => {
+    Article.findAll({
+        order: [
+            ['createdAt', 'DESC']
+        ]
+    }).then((articles) => {
+        res.render('admin/articles/article', {articles: articles});
+    });
+})
 
 module.exports = router;
