@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 //Models:
 const Article = require('./articles/Articles');
+const User = require('./users/User');
 
 //Rota página about:
 const aboutController = require('./about/AboutController');
