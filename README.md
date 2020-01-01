@@ -9,6 +9,7 @@ Projeto com intuito principal de colocar em prática conhecimentos adquiridos at
 
 # O que já está parcialmente implementado:
 - Rotas de CRUD de artigos (ainda sem métodos de autenticação);
+- Método de registro de usuários;
 - Páginas do front-end (ainda estáticas) com um layout base para testes.
 
 # O que ainda será implementado:
